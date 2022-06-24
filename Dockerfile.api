@@ -1,0 +1,11 @@
+# This Dockerfile builds the API only.
+FROM python:3.9
+WORKDIR /app
+
+RUN apt update
+
+COPY dorflutter-server/. .
+RUN pip install -r ./requirements.txt
+ENV PYTHONUNBUFFERED=0
+EXPOSE 5000
+CMD ["gunicorn", "-b", ":5000", "app:application", "-k", "gevent"]

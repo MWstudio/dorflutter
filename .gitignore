@@ -1,0 +1,9 @@
+/dorflutter-database
+/dorflutter-client
+/dorflutter-server
+/client-react
+/dorflutter-chat-server
+/dorflutter-cdn
+/dorflutter-app
+.DS_Store
+oracle.ppk
